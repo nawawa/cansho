@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    init: true
+    working_dir: "/cansho"
+    volumes:
+      - ./src:/cansho
+    ports:
+      - "3000:3000"
